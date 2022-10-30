@@ -1,79 +1,69 @@
+var box1 = document.getElementById("box1")
+box1.style.color = "white"
+var red = 0
+var green = 0
+var blue = 0
+var x = 0
+var y = 0
 
 
-var input = document.getElementById("commandline");
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("commandline").click();
-  }
-});
+function knap(){
+    console.log("Du har klikket på knappen.")
+    red += 3
+    green += 7
+    blue += 5
+    var c =`rgb(${red%255}, ${green%255}, ${blue%255})`
+    box1.style.backgroundColor = c
+    box1.innerHTML = "nice"
+    
+    var height = window.innerHeight - 100
+    var width = window.innerWidth - 100
 
-function showVal() {
-    const textarea = document.getElementById('commandline')
-    var tmp = document.getElementById("commandline").value;
-    if(tmp == ""){
-      // console.log("nothing")
-    }
-    else{
-    document.getElementById('console_content').innerHTML += (tmp + "<br/>");
-   textarea.value = ''
-   if(tmp == "/tp1"){
-    window.location.href = "https://darthwarden06.github.io/AdriansHjemmeside1/"
-  }
-    if(tmp == "/tp2"){
-      window.location.href = "gogogo.html"
-    }
-    if(tmp == "/clear")
-    document.getElementById("clear").click()
-    if(tmp =="/!"){
-      document.getElementById("clear").click()
-      document.getElementById('console_content').innerHTML += ("(/tp1) Ført videre til webiste" + "<br/>" + "(/tp2) Ført videre til project 2" + "<br/>" + "(/clear) eller '-' for at cleare chatten" + "<br/>" + "(/run) for at køre et program")
-    }
-  
-  }
-  if(tmp == "/run"){
-    // console.log("hej")
-    window.open("nyside.html")
-    setTimeout(hackerMan, 200)
-   
-  }
-  
+    x += 1
+    y += 1
+
+    x = x%width
+    y = y%height
+
+    box1.style.top = `${y}px`
+    box1.style.left = `${x}px`
+}
+setInterval(knap, 5)
+
+console.log("Hello there!")
+
+a = "Adrian"
+
+
+
+
+
+
+
+
+
+/*
+var box1Styling = box1.style
+console.log(box1Styling)
+*/
+
+/*
+
+svar = prompt("Hvad er dit navn?")
+if(svar == a) {
+    console.log("flot navn")
+    box1.innerHTML = "Flot Navn"
+    box1.style.color = "white"
+    
+}
+else{
+    console.log("ikke et flot navn")
 
 }
+*/
+/*
+console.log(box1.id)
+box1.id = "box2"
+console.log(box1.id)
+*/
 
-function clearMe(){
-  // console.log("clearMe")
-  const textarea = document.getElementById('console_content').innerHTML ='';
-
-}
-function commandList(){
-  document.getElementById("clear").click()
-  document.getElementById("commandline").value = '/!'
-  document.getElementById("commandline").click()
-
-}
-function hackerMan(){
-  document.getElementById("clear").click()
-  document.getElementById("console_content").innerHTML += ("Victor" + "<br/>" + "Jeg" + "<br/>" + "hacker" + "<br/>" + "alle" + "<br/>")
-}
-function allowClear(){
-  var myCheck = document.getElementById("myCheck")
-  
-  if (myCheck.checked == true){
-    document.getElementById('console_content').innerHTML += ("<br/>" + "Clear is enabled" + "<br/>")
-    input.addEventListener("keypress", function(event) { 
-      if (event.key === "-") {
-        event.preventDefault();
-        document.getElementById("clear").click();
-        document.getElementById("commandline").click();
-        }
-   
-    }
-    )
-
- }
-
-if (myCheck.checked == false){
-  document.getElementById('console_content').innerHTML += ("<br/>" + "Clear is disabled" + "<br/>")
-}
-} 
