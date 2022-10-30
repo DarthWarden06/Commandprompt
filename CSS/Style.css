@@ -1,0 +1,147 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+#titel{
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 200px;
+    font-family: sans-serif;
+    background-color: blanchedalmond;
+}
+#content{
+    font-size: 100px;
+    font-family: monospace;
+    text-align: center;
+    background-color: rgb(20, 34, 200);
+}  
+  p {
+    color: green;
+    text-align: left;
+    font-size: 20px;
+    
+  }
+  
+  #container1 {
+    width: auto;
+  }
+  
+  #console {
+
+    background-color: black;
+    height: 600px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    width: inherit;
+
+  }
+  
+  #commandline {
+    height: 100px;
+    width: 100%;
+    font-size: 18px;
+    background-color: black;
+    color: green;
+    position: relative;
+  
+  }
+  .line{
+    width: auto;
+    height: 5px;
+    background-color: green;
+  }
+  body, html {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    background-color: black;
+    
+}
+.box2{
+  color: green;
+}
+
+#console_content{
+  /* margin-top: 5%; */
+  padding-top: 5.5px;
+
+}
+.commandlist{
+  background-color: green;
+  border: 1px rgb(34, 38, 38) solid;
+  /* margin: 20% 0; */
+  height: 20px;
+  width: auto;
+  padding: 5px;
+  margin-top: 5%;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.parent {
+  display: flex;
+  height: 20px;
+}
+#clear{
+  margin-right: 10px;
+}
+
+#settings{
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  bottom: 30%;
+  background-color: burlywood;
+  border: 5px solid rgb(34, 38, 38);
+
+
+}
+#myCheck{
+  height: 50px;
+  width: 50px;
+  bottom: 0px;
+  position: relative;
+
+}
+input{
+  accent-color: green;
+  color: green;
+}
+
+#settinglogo{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+
+}
+#closebtn {
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  cursor: pointer;
+}
+.img:hover{
+  /* scale: 1.06; */
+  background-color: rgba(255, 255, 255, 0.234);
+  border-radius: 20px;
+  
+}
+#myCheck:hover{
+  cursor: pointer;
+}
+.commandlist:hover{
+  scale: 0.98;
+  background-color: rgb(91, 144, 91);
+  transition: 0.2s;
+}
+p:hover {
+  pointer-events: none;
+}
+/* #settinglogo:hover #closebtn:hover{
+  height: 20px;
+  width: 20px;
+} */

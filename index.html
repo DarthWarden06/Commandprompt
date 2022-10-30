@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascripting 2</title>
-    <!--favicon-->
-    <link rel="stylesheet" href="style.css">
+    <title>Console</title>
+    <link rel="stylesheet" href="./CSS/Style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.jpg">
 </head>
+
 <body>
-    <div id="box1" class="box">1</div>
-    <div id="box2" class="box">2</div>
-    <div class="box" onclick="knap()">3</div>
+    <div id="container1">
+
+      <div id="console">
+        <p id="console_content"></p>
+
+     <div class="parent">
+        <div id="clear" class="commandlist child" onclick="clearMe();">Clear</div>
+
+       <div class="commandlist child" onclick="commandList();">/! for commandlist</div>
+    </div>
+  </div>
+      <div class="line"></div>
+      <div><input id="commandline" type="text" placeholder="Command" onclick="showVal();"></div>
+
+ </div>
+ <div id="settings" style="display:none">
+  <p style="color: blue;">Clear on '-'</p>
+  
+    <label><input id="myCheck" type="checkbox" onclick="allowClear()"></label>
+
+  <img id="closebtn" class="img" src="./img/icons8-macos-close-64.png" alt="Close" onclick="closeSettings()">
+</div>
+<img id="settinglogo" style="display: block;" class="img" src="./img/settings-64.png" alt="Settings" onclick="showSettings()">
 
 
 
-
- <script src="script.js"></script>
-</body>
+<script src="console.js"></script>
+  </body>
 </html>
