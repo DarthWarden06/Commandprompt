@@ -6,6 +6,7 @@
     height: 100%;
     background: linear-gradient(to right, #fdfdfd, #ebedee 70%);
     background-color: pink;
+    overflow-x: hidden;
   }
 .container {
     position: absolute;
@@ -88,4 +89,31 @@ p{
     position: relative;
     bottom: 20%;
     
+}
+.svg{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    
+}
+
+@keyframes spin {
+  0%{
+  
+  }
+  25%{
+    transform: translate(0vw, -75vh);
+  }
+50%{
+transform: translate(85vw, -75vh);
+}
+75%{
+  transform: translate(85vw, 0vw);
+}
+  100%{
+   transform: translate(0vw, 0vh);
+  }
+}
+svg{
+  animation: spin 0.7s infinite;
 }

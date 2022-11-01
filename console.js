@@ -1,4 +1,6 @@
 
+var input2 = document.getElementById('commandline');
+MarkOnLoad(input2, input2.value.length);
 
 var input = document.getElementById("commandline");
 input.addEventListener("keypress", function(event) {
@@ -7,6 +9,7 @@ input.addEventListener("keypress", function(event) {
     document.getElementById("commandline").click();
   }
 });
+
 
 function showVal() {
     const textarea = document.getElementById('commandline')
@@ -23,11 +26,14 @@ function showVal() {
     if(tmp == "/tp2"){
       window.location.href = "gogogo.html"
     }
+    if(tmp == "/tp3"){
+      window.location.href ="startup.html"
+    }
     if(tmp == "/clear")
     document.getElementById("clear").click()
     if(tmp =="/!"){
       document.getElementById("clear").click()
-      document.getElementById('console_content').innerHTML += ("(/tp1) Ført videre til webiste" + "<br/>" + "(/tp2) Ført videre til legeplads 1" + "<br/>" + "(/clear) eller '-' for at cleare chatten" + "<br/>" + "(/run) for at køre et program")
+      document.getElementById('console_content').innerHTML += ("(/tp1) Ført videre til webiste" + "<br/>" + "(/tp2) Ført videre til legeplads 1" + "<br/>" + "(/tp3) Ført videre til legeplads 2" + "<br/>" + "(/clear) eller '-' for at cleare chatten" + "<br/>" + "(/run) for at køre et program")
     }
   
   }
@@ -90,5 +96,21 @@ function closeSettings(){
   showkasse.style.display = "none"
   var showSettings = document.getElementById("settinglogo")
   showSettings.style.display = "block"
+  // MarkOnLoad()
   
+}
+
+function MarkOnLoad(ctrl, pos) {
+// Credits: http://blog.vishalon.net/index.php/javascript-getting-and-setting-caret-position-in-textarea/
+  if (ctrl.setSelectionRange) {
+    ctrl.focus();
+    ctrl.setSelectionRange(pos, pos);
+  
+  } else if (ctrl.createTextRange) {
+    var range = ctrl.createTextRange();
+    range.collapse(true);
+    range.moveEnd('character', pos);
+    range.moveStart('character', pos);
+    range.select();
+  }
 }

@@ -1,0 +1,138 @@
+
+body{
+    background-color: rgb(127, 105, 225);
+	margin: auto;
+	perspective: 500px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#logo{
+    height: auto;
+    width: 50%;
+    margin-left: auto;
+  margin-right: auto;
+    animation: rotate 2.5s;
+    display: block;
+    opacity: 0%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+@keyframes rotate {
+    0% {
+    opacity: 100%;
+        rotate: 90deg;
+        position: absolute;
+        left: 25%;
+        top: 0px;
+    }
+ 
+    33% {
+        
+        opacity: 100%;
+        rotate: -180deg;
+    }
+    66%{
+        rotate: 180deg;
+        opacity: 100%;
+    }
+    80% {
+        opacity: 100%;
+        rotate: -88deg;
+    }
+    90%{
+        opacity: 100%;
+        rotate: -2deg;
+    }
+    100%{
+        position: absolute;
+        left: 25%;
+        top: 0px;
+        opacity: 0%;
+        
+    }
+    
+ }
+  
+
+.color{
+    stroke: #3f5787;
+    animation: fill 3.75s;
+    
+}
+@keyframes fill {
+    40%{
+        stroke: #3f5787;
+    }
+    90%{
+        stroke: white;
+    }
+    100%{
+        stroke: #3f5787;
+    }
+}
+#lilleikon{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+.class2{
+    stroke: white;
+    animation: appear 2.5s;
+    display: block;
+    opacity: 100%;
+
+}
+
+@keyframes appear {
+    0%{
+       opacity: 0%;
+    }
+    90%{
+       opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+  * {
+    box-sizing: border-box;
+  }
+  
+
+.parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    /* border: 1px solid black; */
+    position: absolute;
+    left: 40%;
+    top: 30vh;
+    margin: auto;
+    animation: appear 2.5s;
+    
+
+
+}
+.child{
+    width: 400px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: rgb(191, 182, 182);
+    border: 0px solid;
+    box-shadow: 2px 5px;
+}
+.child:hover{
+    scale: 1.02;
+    cursor: pointer;
+    box-shadow: none;
+    
+    
+}
