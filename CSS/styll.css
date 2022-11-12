@@ -12,12 +12,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
 }
 
 .text {
-    background: linear-gradient(90deg, #00dbde, #fc00ff);
-    font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+  font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+  
     font-size: 40px;
     text-transform: uppercase;
     -webkit-background-clip: text;  
@@ -115,5 +116,5 @@ transform: translate(85vw, -75vh);
   }
 }
 svg{
-  animation: spin 0.7s infinite;
+  animation: spin 0.7s;
 }

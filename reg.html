@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./CSS/styles.css" />
+  </head>
+  <body>
+    <h1>Registrationsformel</h1>
+    <p>Udfyld registrationsformlen.</p>
+    <form method="post" action='startup.html'>
+      <fieldset>
+        <label for="first-name">Fornavn: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Efternavn: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password"> Nyt Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-9]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" /> Personlig Account</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> business Account</label>
+        <label for="terms-and-conditions" name="terms-and-conditions">
+          <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> Jeg accepterer <a href="https://www.bibelselskabet.dk/brugbibelen/bibelenonline/1_Mos/1" target="_blank">terms and conditions.</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Upload et profil billede: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Alder (år): <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">Hvordan kender du mig?
+          <select id="referrer" name="referrer">
+            <option value="">(vælg én)</option>
+            <option value="1">Kender dig bare</option>
+            <option value="2">Er bare hemmelig beundrer</option>
+            <option value="3">Stop</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="bio">Bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Jeg elsker at gå en lang tur på stranden..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+    
+  </body>
+</html>
